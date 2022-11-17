@@ -42,7 +42,7 @@ router.post('/', async (req, res) => {
   Product.create(req.body)
   .then( (product) => {
     
-    if (req.body.tagIds.lenght) {
+    if (req.body.tagIds.length) {
       const productTagIdArr = req.body.tagIds.map( (tag_id) => {
         return {
           product_id: product.id,
